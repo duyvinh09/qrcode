@@ -253,7 +253,8 @@
                 const bankId = document.getElementById('bank_id').value;
                 const accountNo = document.getElementById('account_no').value.trim();
                 const template = document.getElementById('template').value;
-                const amount = document.getElementById('amount').value.trim();
+                const amountInput = document.getElementById('amount');
+                const amount = amountInput.getAttribute('data-raw') || '';
                 const description = encodeURIComponent(document.getElementById('description').value.trim());
                 const accountName = encodeURIComponent(document.getElementById('account_name').value.trim());
                 
